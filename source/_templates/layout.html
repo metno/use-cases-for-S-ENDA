@@ -1,0 +1,21 @@
+{% extends "!layout.html" %}
+
+{# See https://www.sphinx-doc.org/en/master/templating.html#jinja-sphinx-templating-primer #}
+
+{# This wipes the content, meaning that the templating system works
+<div role="main">
+  {% block document %}{% endblock %}
+</div>
+#}
+
+{% block rootrellink %}
+    <li><a href="https://s-enda.met.no/">S-ENDA Project Homepage</a> &raquo;</li>
+    {{ super() }}
+{% endblock %}
+
+{# However, this does not change the footer: #}
+{% block footer %}
+<a rel="license" href="https://creativecommons.org/licenses/by/4.0/" title="Creative Commons Attribution 4.0 International license">
+    License
+</a>
+{% endblock %}
